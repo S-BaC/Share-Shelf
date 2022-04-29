@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Shelf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header flexbox">
+        <div class="logo flexbox">
+            <img src="icons/open-book.png" alt="Logo"/>
+            <h1><span id="userName">Book</span> Shelf</h1>
+        </div>
+        <div class="loginOptions flexbox">
+            <span class="signin" onclick="signin()">Sign In</span>
+            <span class="signup" onclick="signup()">Sign Up</span>
+            <span class="guestMode">Guest Mode</span>
+        </div>
+    </div>
+    <div class="nav flexbox">
+        <div class="navOption flexbox">
+            <form action="submit" class="searchForm flexbox">
+                <input type="text" name="searchTxt">
+                <img src="icons/magnifying-glass.png" alt="icon" onclick="search()">
+            </form>
+        </div>
+        <div class="navOption flexbox">
+            Shelf Size
+        </div>
+        <div class="navOption flexbox">
+            Mode
+        </div>
+        <div class="navOption flexbox">
+            <div class="contact flexbox">
+                <img src="icons/github (1).png" alt="">
+                <img src="icons/linkedin (1).png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="shelf">
+            <div class="bookCard flexbox">
+                <h3 class="title"> 1984 </h1>
+                <p class="author"> George Orwell </p>
+                <p class="rating"> 10/10 </p>
+            </div>
+            <div class="bookCard flexbox">
+                <img class="bookImg" src="photos/animal-farm.jpg" alt="">
+            </div>
+            <div class="bookCard flexbox">
+                <h3 class="title"> 1984 </h1>
+                <p class="author"> George Orwell </p>
+                <p class="rating"> 10/10 </p>
+            </div>
+            <div class="bookCard flexbox">
+                <h3 class="title"> 1984 </h1>
+                <p class="author"> George Orwell </p>
+                <p class="rating"> 10/10 </p>
+            </div>
+            <div class="bookCard flexbox">
+                <h3 class="title"> 1984 </h1>
+                <p class="author"> George Orwell </p>
+                <p class="rating"> 10/10 </p>
+            </div>
+            <div class="bookCard flexbox">
+                <h3 class="title"> 1984 </h1>
+                <p class="author"> George Orwell </p>
+                <p class="rating"> 10/10 </p>
+            </div>
+            <div class="bookCard lastCard flexbox">
+                <img src="icons/plus.png" alt="">
+            </div>
+    </div>
+</body>
+</html>
