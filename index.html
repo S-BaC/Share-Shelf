@@ -5,71 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Share Shelf</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
-
     <div class="header flexbox">
         <div class="logo flexbox">
             <img src="icons/open-book.png" alt="Logo"/>
             <h1><span id="userName">Book</span> Shelf</h1>
         </div>
         <div class="loginOptions flexbox">
-            <span class="signin" onclick="signin()">Sign In</span>
-            <span class="signup" onclick="signup()">Sign Up</span>
-            <span class="guestMode">Guest Mode</span>
+            <span class="signin link">Sign In</span>
+            <span class="signup link">Sign Up</span>
+            <span class="guestMode link">Guest Mode</span>
         </div>
     </div>
+
+    <!-- Messages --------------------------------------->
+    <div class="notiPanel msg">
+        <div class="notiPanelSub">
+            <h2>Welcome, please sign in.</h2>
+            <h3> Just giving it a try? Use the guest mode.</h3>
+        </div>
+    </div>
+    <div class="notiPanel form">
+        <div class="notiPanelSub">
+            <form action="" class="logForm">
+                <label for="title"> Title </label>
+                <input type="text" name="title" required>
+
+                <label for="author"> Author </label>
+                <input type="text" name="author" required>
+
+                <!-- <label for="pagesTotal"> Total Pages </label>
+                <input type="number" min="1" name="pagesTotal">
+
+                <label for="pagesRead"> Pages you've read </label>
+                <input type="number" min="0" name="pagesRead"> -->
+
+                <label for="rating">Rating(1 - 10)</label>
+                <input type="range" min="1" max="10" name="rating" required>
+                
+                <!-- <label for="webLink">Link (if any)</label>
+                <input type="text" name="webLink"> -->
+
+                <button name="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <!-- Messages --------------------------------------->      
+
     <div class="nav flexbox">
         <div class="navOption flexbox">
             <form action="submit" class="searchForm flexbox">
                 <input type="text" name="searchTxt">
-                <img src="icons/magnifying-glass.png" alt="icon" onclick="search()">
+                <img src="icons/magnifying-glass.png" alt="icon" onclick="search()" class="link">
             </form>
         </div>
-        <div class="navOption flexbox">
+        <div class="navOption flexbox link">
             Shelf Size
         </div>
-        <div class="navOption flexbox">
+        <div class="navOption flexbox link">
             Mode
         </div>
         <div class="navOption flexbox">
             <div class="contact flexbox">
-                <img src="icons/github (1).png" alt="">
-                <img src="icons/linkedin (1).png" alt="">
+                <img src="icons/github (1).png" alt="Github" class="link">
+                <img src="icons/linkedin (1).png" alt="LinkedIn" class="link">
             </div>
         </div>
     </div>
     <div class="shelf">
-            <div class="bookCard flexbox">
-                <h3 class="title"> 1984 </h1>
-                <p class="author"> George Orwell </p>
-                <p class="rating"> 10/10 </p>
-            </div>
-            <div class="bookCard flexbox">
-                <img class="bookImg" src="photos/animal-farm.jpg" alt="">
-            </div>
-            <div class="bookCard flexbox">
-                <h3 class="title"> 1984 </h1>
-                <p class="author"> George Orwell </p>
-                <p class="rating"> 10/10 </p>
-            </div>
-            <div class="bookCard flexbox">
-                <h3 class="title"> 1984 </h1>
-                <p class="author"> George Orwell </p>
-                <p class="rating"> 10/10 </p>
-            </div>
-            <div class="bookCard flexbox">
-                <h3 class="title"> 1984 </h1>
-                <p class="author"> George Orwell </p>
-                <p class="rating"> 10/10 </p>
-            </div>
-            <div class="bookCard flexbox">
-                <h3 class="title"> 1984 </h1>
-                <p class="author"> George Orwell </p>
-                <p class="rating"> 10/10 </p>
-            </div>
-            <div class="bookCard lastCard flexbox">
+            <div class="bookCard lastCard flexbox" onclick="addBooks()">
                 <img src="icons/plus.png" alt="">
+            </div>
+            <!-- <div class="bookCard flexbox" onclick="cardSelected(this)">
+                <img class="bookImg" src="photos/animal-farm.jpg" alt="">
+            </div> -->
+            <div class="bookCard flexbox" onclick="cardSelected(this)">
+                <h3 class="title"> 1984 </h1>
+                <p class="author"> George Orwell </p>
+                <p class="rating"> 10/10 </p>
             </div>
     </div>
 </body>
